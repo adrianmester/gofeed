@@ -1,0 +1,8 @@
+<!--
+Description: rss channel pubDate with Tues instead of Tue
+-->
+<rss version="2.0">
+  <channel>
+    <pubDate>Tues, 08 Jul 2014 12:56:00 GMT</pubDate>
+  </channel>
+</rss>
