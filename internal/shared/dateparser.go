@@ -190,6 +190,10 @@ func ParseDate(ds string) (t time.Time, err error) {
 	if d == "" {
 		return t, fmt.Errorf("Date string is empty")
 	}
+	// some feeds use Tues and Thurs instead of Tue and Thu, which breaks parsing
+	d = strings.Replace(d, "Tues", "Tue", 1)
+	d = strings.Replace(d, "Thurs", "Thu", 1)
+	fmt.Print(d)
 	for _, f := range dateFormats {
 		if t, err = time.Parse(f, d); err == nil {
 			return
